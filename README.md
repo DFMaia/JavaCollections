@@ -1,27 +1,18 @@
-# Repository of Lists, Queues, HashSet, and so on.
+# Repositório para consultas de Collections do Java.
 
-#### Some observations about HashSet, LinkedHashSet and TreeSet :point_down:
+### Qual o objetivo desse repositório?
+> Sabendo que a classe Collections do Java é muito complexa e que exige bastante estudo, decici criar um repositório para consultas rápidas. 
+> Caso queira refazer um estudo sobre a classe ao invés de somente consultar, leia o tópico abaixo :point_down:.
 
-**HashSet**
+### Qual é a _ordem_ do estudo? 
 
-> When to use: When sorting is no necessary.
+> - **List**  
+> - **Queue**  
+> - **Set**  
+> - **Map**  
+> - **Comparators**  
+> - **Optionals**  
+> - **Streams**  
 
-> > Sort: It is not sorted. No duplicated values are allowed.
-
-> > > Performance: High performance.
-
-**LinkedHashSet**
-
-> When to use: When is important to keep the adding order.
-
-> > Sort: Keep the adding order.
-
-> > > Performance: Slow due to the adding order.
-
-**TreeSet**
-
-> When to use: When is necessary to change the order of elements.
-
-> > Sort: Keeps the order and can be resorted.
-
-> > Performance: The read performance is great. To modify any element it has to be resorted. Slower than LinkedHashSet
+## Sugestões?
+> Fique _**a vontade**_ para fornecê-las

@@ -9,34 +9,34 @@ public class ComparatorExampleList {
 
     public static void main(String[] args) {
 
-        List<StudentComparable> studdents = new ArrayList<>();
+        List<StudentComparable> students = new ArrayList<>();
 
-        studdents.add(new StudentComparable("Pedro", 19));
-        studdents.add(new StudentComparable("Carlos", 23));
-        studdents.add(new StudentComparable("Mariana", 21));
-        studdents.add(new StudentComparable("João", 18));
-        studdents.add(new StudentComparable("Thiago", 20));
-        studdents.add(new StudentComparable("George", 22));
-        studdents.add(new StudentComparable("Larissa", 21));
+        students.add(new StudentComparable("Pedro", 19));
+        students.add(new StudentComparable("Carlos", 23));
+        students.add(new StudentComparable("Mariana", 21));
+        students.add(new StudentComparable("João", 18));
+        students.add(new StudentComparable("Thiago", 20));
+        students.add(new StudentComparable("George", 22));
+        students.add(new StudentComparable("Larissa", 21));
 
         System.out.println("---> Adding order <---");
-        System.out.println(studdents);
+        System.out.println(students);
 
         System.out.println("\nSorting from age - ascending");
-        studdents.sort((first, second) -> first.getAge() - second.getAge());
-        System.out.println(studdents);
+        students.sort((first, second) -> first.getAge() - second.getAge());
+        System.out.println(students);
 
         System.out.println("\nSorting from age - descending");
-        studdents.sort((first, second) -> second.getAge() - first.getAge());
-        System.out.println(studdents);
+        students.sort((first, second) -> second.getAge() - first.getAge());
+        System.out.println(students);
 
         System.out.println("\nSorting from age - ascending");
-        studdents.sort(Comparator.comparingInt(StudentComparable :: getAge));
-        System.out.println(studdents);
+        students.sort(Comparator.comparingInt(StudentComparable :: getAge));
+        System.out.println(students);
 
         System.out.println("\nSorting from age - descending");
-        studdents.sort(Comparator.comparingInt(StudentComparable :: getAge).reversed());
-        System.out.println(studdents);
+        students.sort(Comparator.comparingInt(StudentComparable :: getAge).reversed());
+        System.out.println(students);
 
         /**
          * Be aware that the method Collections.sort(Object) will only work if the object
@@ -44,16 +44,16 @@ public class ComparatorExampleList {
          */
         System.out.println("\nSorting from age - ascending. Using only the method ");
         System.out.println("Collections.sort().");
-        Collections.sort(studdents);
+        Collections.sort(students);
 
         /**
          * In this case the List does not necessary has to have an Comparable implementation
          * The class StudentReverseComparator has a comparator implementation with the
          * rule of descending sort.
          */
-        Collections.sort(studdents, new StudentReverseComparator());
+        Collections.sort(students, new StudentReverseComparator());
         System.out.println("/nReverse Order");
-        System.out.println(studdents);
+        System.out.println(students);
 
     }
 
